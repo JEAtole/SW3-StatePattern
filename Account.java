@@ -32,7 +32,7 @@ public class Account{
 
     public String toString() {
         String output = "";
-        output += "Account number: " + accountNumber + "/n";
+        output += "Account number: " + accountNumber + "\n";
         output += "Balance: " + balance;
         return output;
     };
