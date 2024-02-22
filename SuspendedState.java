@@ -1,26 +1,20 @@
 public class SuspendedState implements AccountState{
 
-    private Account account;
-
-    public SuspendedState(Account account){
-        this.account = account;
-    }
-
     @Override
-    public void deposit(double depositAmount) {
+    public void deposit(double depositAmount, Account account) {
         System.out.println("You cannot deposit on suspended account!");
         System.out.println(account.toString());
     };
 
     @Override
-    public void withdraw(double withdrawAmount) {
+    public void withdraw(double withdrawAmount, Account account) {
         System.out.println("You cannot withdraw on suspended account!");
         System.out.println(account.toString());
     };
 
     @Override
     public void activate(Account account) {
-        account.setAccountState(new ActiveState(account));
+        account.setAccountState(new ActiveState());
         System.out.println("Account is activated!\n");
     };
 
@@ -31,7 +25,7 @@ public class SuspendedState implements AccountState{
 
     @Override
     public void close(Account account) {
-        account.setAccountState(new ClosedState(account));
+        account.setAccountState(new ClosedState());
         System.out.println("Account is closed!\n");
     };
 

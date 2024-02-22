@@ -2,7 +2,7 @@ public class Account{
 
     private String accountNumber;
     private double balance;
-    private AccountState accountState = new ActiveState(this);
+    private AccountState accountState = new ActiveState();
 
 
     public Account(String accountNumber, double balance) {
@@ -11,11 +11,11 @@ public class Account{
     }
 
     public void deposit(double depositAmount) {
-        accountState.deposit(depositAmount);
+        accountState.deposit(depositAmount, this);
     };
 
     public void withdraw(double withdrawAmount) {
-        accountState.withdraw(withdrawAmount);
+        accountState.withdraw(withdrawAmount, this);
     };
 
     public void activate() {

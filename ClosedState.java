@@ -1,19 +1,13 @@
 public class ClosedState implements AccountState{
-    
-    private Account account;
-
-    public ClosedState(Account account){
-        this.account = account;
-    }
 
     @Override
-    public void deposit(double depositAmount) {
+    public void deposit(double depositAmount, Account account) {
         System.out.println("You cannot deposit on closed account!");
         System.out.println(account.toString());
     };
 
     @Override
-    public void withdraw(double withdrawAmount) {
+    public void withdraw(double withdrawAmount, Account account) {
         System.out.println("You cannot withdraw on closed account!");
         System.out.println(account.toString());
     };

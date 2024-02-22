@@ -16,6 +16,11 @@ public class AccountTest {
         // Update balance and display account number and current balance.
         // Call the toString() method in the deposit().
 
+        //Withdraw to the account
+        myAccount.withdraw(100.0);// update balance and displays account number and
+        // current balance. Call the toString() method in withdraw().    
+
+
         // Close the account
         myAccount.close();  // Displays "Account is closed!"
 
