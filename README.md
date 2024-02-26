@@ -47,11 +47,4 @@ Implement the State pattern to improve code maintainability and flexibility:
 
 ## Class Diagram
 
-
-
-
-
-
-
-
-
+![statePattern_Class Diagram](https://github.com/JEAtole/SW3-StatePattern/assets/126703958/fddcec5c-a40c-4dbe-a095-6d4232e3b54c)
